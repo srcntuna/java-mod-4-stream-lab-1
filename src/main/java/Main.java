@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.stream.LongStream;
 
 class Main {
 
@@ -15,5 +16,8 @@ class Main {
      */
     private static boolean isPrime(long number) {
         // your code here
+
+
+        return LongStream.rangeClosed(2,number/2).allMatch(num -> number % num !=0);
     }
 }
